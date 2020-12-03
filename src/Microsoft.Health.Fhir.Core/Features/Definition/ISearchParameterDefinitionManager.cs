@@ -5,7 +5,7 @@
 
 using System;
 using System.Collections.Generic;
-using Microsoft.Health.Fhir.Core.Features.Definition.BundleWrappers;
+using Hl7.Fhir.ElementModel;
 using Microsoft.Health.Fhir.Core.Models;
 using Microsoft.Health.Fhir.ValueSets;
 
@@ -81,7 +81,7 @@ namespace Microsoft.Health.Fhir.Core.Features.Definition
         /// <summary>
         /// Allows addition of a new search parameters at runtime.
         /// </summary>
-        /// <param name="searchParamBundle">A bundle containing SearchParameter resources.</param>
-        public void AddNewSearchParameters(BundleWrapper searchParamBundle);
+        /// <param name="searchParameters">An ennumeration containing SearchParameter resources.</param>
+        void AddNewSearchParameters(IList<ITypedElement> searchParameters);
     }
 }
